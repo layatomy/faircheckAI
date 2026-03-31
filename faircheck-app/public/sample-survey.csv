@@ -1,0 +1,36 @@
+Timestamp,Gender,Age,How satisfied are you with our service?,Do you agree our product is the best?,What is your location?,Would you recommend us?
+2024-03-10 09:15:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-10 10:30:00,Male,25-34,Satisfied,Agree,New York,Yes
+2024-03-10 11:00:00,Male,18-24,Very Satisfied,Strongly Agree,California,Yes
+2024-03-10 14:20:00,Male,25-34,Neutral,Neutral,New York,Maybe
+2024-03-10 15:45:00,Female,25-34,Satisfied,Agree,Texas,Yes
+2024-03-10 16:00:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-10 16:30:00,Male,35-44,Satisfied,Agree,New York,Yes
+2024-03-10 17:00:00,Male,18-24,Dissatisfied,Disagree,California,No
+2024-03-10 17:45:00,Male,25-34,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-10 18:00:00,Male,18-24,Satisfied,Agree,New York,Yes
+2024-03-17 09:00:00,Male,25-34,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-17 09:30:00,Male,18-24,Satisfied,Agree,New York,Yes
+2024-03-17 10:00:00,Male,35-44,Neutral,Neutral,Texas,Maybe
+2024-03-17 10:15:00,Female,18-24,Very Satisfied,Strongly Agree,California,Yes
+2024-03-17 10:45:00,Male,25-34,Satisfied,Agree,New York,Yes
+2024-03-17 11:00:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-17 11:30:00,Male,25-34,Satisfied,Agree,New York,Yes
+2024-03-17 12:00:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-17 13:00:00,Female,25-34,Neutral,Neutral,Florida,Maybe
+2024-03-17 14:00:00,Male,35-44,Satisfied,Agree,New York,Yes
+2024-03-17 14:30:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-17 15:00:00,Male,25-34,Satisfied,Agree,California,Yes
+2024-03-17 15:30:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-17 16:00:00,Male,25-34,Satisfied,Agree,New York,Yes
+2024-03-17 16:30:00,Male,18-24,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-24 09:00:00,Male,18-24,Satisfied,Agree,New York,Yes
+2024-03-24 09:30:00,Female,25-34,Very Satisfied,Strongly Agree,Texas,Yes
+2024-03-24 10:00:00,Male,18-24,Satisfied,Agree,New York,Yes
+2024-03-24 10:30:00,Male,25-34,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-24 11:00:00,Male,18-24,Neutral,Disagree,California,No
+2024-03-24 11:30:00,Male,25-34,Satisfied,Agree,New York,Yes
+2024-03-24 12:00:00,Male,35-44,Very Satisfied,Strongly Agree,New York,Yes
+2024-03-24 13:00:00,Male,18-24,Satisfied,Agree,New York,Yes
+2024-03-24 14:00:00,Female,45-54,Very Satisfied,Strongly Agree,Florida,Yes
+2024-03-24 15:00:00,Male,18-24,Satisfied,Agree,New York,Yes
