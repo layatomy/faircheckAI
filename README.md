@@ -1,128 +1,203 @@
-# FairCheck AI
+# FairCheck AI – Survey Bias Auditor 🔍
 
-<p align="center">
-  <strong>🔍 Detect, Measure, and Mitigate Bias in AI/ML Models</strong>
-</p>
-
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#how-it-works">How It Works</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a>
-</p>
+> **Built for [Build with AI Hackathon](https://github.com/gtech-mulearn/build-with-ai) by GTech MuLearn**
 
 ---
 
-## 🚀 Overview
+## Problem Statement
 
-**FairCheck AI** is an open-source toolkit designed to help developers, data scientists, and organizations audit their machine learning models for fairness and bias. As AI systems increasingly influence decisions in hiring, lending, healthcare, and criminal justice, ensuring these systems treat all groups equitably is not just an ethical imperative — it's a necessity.
+AI systems trained on biased survey data inherit and amplify those biases — leading to unfair outcomes in hiring, healthcare, lending, and beyond. Surveys collected via Google Forms and similar platforms often contain hidden biases such as **gender imbalance, age skew, response time clustering, and leading questions**. Currently, there is no simple tool for non-technical users to audit their survey datasets for these biases before the data enters an AI pipeline.
 
-FairCheck AI provides a comprehensive suite of tools to:
+**FairCheck AI** solves this by providing a one-click bias audit for survey CSV files — detecting, measuring, and visualizing bias so users can fix it before it causes harm.
 
-- **Detect** hidden biases in datasets and trained models
-- **Measure** fairness using industry-standard metrics
-- **Mitigate** bias through pre-processing, in-processing, and post-processing techniques
-- **Report** findings with clear, actionable visualizations
+---
 
-## ✨ Features
+## Project Description
 
-| Feature | Description |
+**FairCheck AI** is a modern web application that lets users upload survey datasets (CSV files) and instantly detects multiple types of bias:
+
+| Bias Type | What It Detects |
 |---|---|
-| **Bias Detection** | Automatically scan datasets and models for demographic disparities across protected attributes (race, gender, age, etc.) |
-| **Fairness Metrics** | Compute metrics like Demographic Parity, Equalized Odds, Disparate Impact, and Calibration |
-| **Bias Mitigation** | Apply techniques such as reweighing, adversarial debiasing, and threshold optimization |
-| **Visual Reports** | Generate interactive dashboards and PDF reports for stakeholders |
-| **Model Agnostic** | Works with any ML framework — scikit-learn, TensorFlow, PyTorch, and more |
-| **CI/CD Integration** | Plug into your ML pipeline to continuously monitor fairness over time |
+| **Demographic Bias** | Gender imbalance, age skew, lack of ethnic diversity |
+| **Temporal Bias** | Responses clustered on specific days or times |
+| **Sampling Bias** | Small sample sizes, low response diversity, missing data |
+| **Question Bias** | Leading, loaded, or presumptive question language |
 
-## 🏗️ How It Works
-
-FairCheck AI operates in three stages:
+### How It Works
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   DETECT    │────▶│   MEASURE   │────▶│   MITIGATE   │
-│             │     │             │     │              │
-│ Scan data & │     │ Compute     │     │ Apply bias   │
-│ model for   │     │ fairness    │     │ reduction    │
-│ disparities │     │ metrics     │     │ techniques   │
-└─────────────┘     └─────────────┘     └─────────────┘
+Upload CSV → Parse & Analyze → Detect Biases → Score & Visualize → Suggest Fixes
 ```
 
-1. **Detect** — Analyze your dataset and model predictions to identify potential biases across protected groups.
-2. **Measure** — Quantify the bias using established fairness metrics to understand severity and scope.
-3. **Mitigate** — Choose and apply appropriate debiasing strategies to reduce unfairness while preserving model performance.
+1. **Upload** — Drag and drop any survey CSV file (Google Forms, Typeform, SurveyMonkey, etc.)
+2. **Analyze** — The system parses the CSV and runs 4 bias detection algorithms
+3. **Score** — An overall **Bias Score (0-100%)** is calculated with color-coded severity:
+   - 🟢 **Green** — Low Bias (0–34%)
+   - 🟡 **Yellow** — Moderate Bias (35–59%)
+   - 🔴 **Red** — High Bias (60–100%)
+4. **Visualize** — Pie charts, bar charts, and a speedometer gauge display the findings
+5. **Recommend** — Actionable suggestions are provided to reduce each detected bias
 
-## 📦 Getting Started
+### AI Integration
 
-### Prerequisites
+FairCheck AI uses **intelligent pattern recognition** powered by AI concepts to:
 
-- Python 3.9+
-- pip or conda
+- **Detect demographic patterns** — Automatically identifies gender, age, ethnicity, and location columns using NLP-based field matching, then calculates distribution imbalances
+- **Analyze question language** — Uses pattern matching with bias-indicator lexicons (leading language, absolute terms, presumptive phrases) to flag potentially biased survey questions
+- **Score bias severity** — A weighted multi-factor scoring algorithm combines all bias signals into a single actionable score
+- **Generate smart recommendations** — Context-aware suggestions are generated based on the specific biases detected in the dataset
 
-### Installation
+---
+
+## Proof of Google AI Usage
+
+Screenshots demonstrating Google AI tool usage are stored in the `/proof` folder:
+
+```
+/proof
+  ├── gemini_code_generation.png
+  ├── gemini_bias_algorithm.png
+  └── gemini_ui_design.png
+```
+
+> 📎 *Google Gemini was used for code generation assistance, bias detection algorithm design, and UI/UX prototyping throughout the development of FairCheck AI.*
+
+---
+
+## Screenshots
+
+### 🔐 Login Page
+Clean, modern login with Google Sign-In and Demo User access.
+
+![Login Page](screenshots/login-page.png)
+
+### 📊 Dashboard
+Drag-and-drop CSV upload with bias type info cards.
+
+![Dashboard](screenshots/dashboard.png)
+
+### ⏳ Analysis In Progress
+Animated multi-step analysis with real-time progress.
+
+![Analyzing](screenshots/analyzing.png)
+
+### 📋 Bias Report — Gauge Meter
+SVG speedometer showing overall Bias Score with color-coded severity.
+
+![Bias Gauge](screenshots/bias-gauge.png)
+
+### ⚠️ Detected Issues & Recommendations
+Severity-tagged issues with actionable fix suggestions.
+
+![Issues](screenshots/issues-suggestions.png)
+
+### 📈 Visualizations
+Pie charts for gender distribution, bar charts for temporal analysis.
+
+![Charts](screenshots/charts.png)
+
+---
+
+## Demo Video
+
+Upload your demo video to Google Drive and paste the shareable link here (max 3 minutes).
+
+[▶️ Watch Demo Video](https://drive.google.com/your-demo-link-here)
+
+---
+
+## Installation Steps
 
 ```bash
 # Clone the repository
 git clone https://github.com/layatomy/faircheckAI.git
-cd faircheckAI
+
+# Go to project folder
+cd faircheckAI/faircheck-app
 
 # Install dependencies
-pip install -r requirements.txt
+npm install
+
+# Run the project
+npm run dev
 ```
 
-### Quick Start
+The app will start at **http://localhost:5173/**
 
-```python
-from faircheck import FairnessAuditor
+### Quick Test
 
-# Load your model and data
-auditor = FairnessAuditor(model=your_model, data=your_data)
+1. Open the app and click **"Continue as Demo User"**
+2. Upload the included sample CSV: `public/sample-survey.csv`
+3. Click **"Analyze for Bias"** and view the full bias report
 
-# Run a full fairness audit
-report = auditor.audit(
-    protected_attributes=["gender", "race"],
-    target_column="prediction"
-)
+---
 
-# View results
-report.summary()
-report.visualize()
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **React 19** | Frontend UI framework |
+| **Vite 8** | Fast dev server and build tool |
+| **React Router v7** | Page navigation |
+| **Chart.js 4** | Data visualization (pie & bar charts) |
+| **PapaParse** | CSV file parsing |
+| **Vanilla CSS** | Custom dark glassmorphism design system |
+| **Google Gemini** | AI-assisted development |
+
+---
+
+## Project Structure
+
+```
+faircheckAI/
+├── faircheck-app/
+│   ├── public/
+│   │   └── sample-survey.csv         # Test CSV with intentional biases
+│   ├── src/
+│   │   ├── components/
+│   │   │   └── Navbar.jsx            # Navigation bar
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx       # Authentication state
+│   │   ├── pages/
+│   │   │   ├── LoginPage.jsx         # Google Sign-In page
+│   │   │   ├── DashboardPage.jsx     # CSV upload interface
+│   │   │   ├── AnalyzingPage.jsx     # Loading animation
+│   │   │   └── ResultsPage.jsx       # Gauge, charts, issues
+│   │   ├── utils/
+│   │   │   └── biasAnalyzer.js       # Core bias detection engine
+│   │   ├── App.jsx                   # Router & state management
+│   │   ├── main.jsx                  # Entry point
+│   │   └── index.css                 # Design system
+│   ├── package.json
+│   └── vite.config.js
+├── proof/                             # Google AI usage screenshots
+├── screenshots/                       # App screenshots
+└── README.md
 ```
 
-## 📊 Supported Fairness Metrics
+---
 
-- **Demographic Parity** — Equal positive prediction rates across groups
-- **Equalized Odds** — Equal true positive and false positive rates
-- **Disparate Impact** — Ratio of positive outcomes between groups
-- **Calibration** — Predicted probabilities match actual outcomes per group
-- **Predictive Parity** — Equal positive predictive values across groups
-- **Individual Fairness** — Similar individuals receive similar predictions
+## Team
 
-## 🤝 Contributing
+| Name | Role |
+|---|---|
+| **Tomy** | Full Stack Developer |
 
-We welcome contributions from the community! Whether it's fixing bugs, adding new fairness metrics, improving documentation, or suggesting features — every bit helps.
+---
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### Resources
 
-Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+- [Build with AI – Hackathon Repo](https://github.com/gtech-mulearn/build-with-ai)
+- [React Documentation](https://react.dev)
+- [Chart.js Documentation](https://www.chartjs.org/docs/)
+- [PapaParse Documentation](https://www.papaparse.com/docs)
 
-## 📄 License
+### License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- Inspired by [AI Fairness 360](https://aif360.mybluemix.net/) and [Fairlearn](https://fairlearn.org/)
-- Built with ❤️ for a more equitable AI future
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 <p align="center">
-  <strong>FairCheck AI</strong> — Because fairness in AI isn't optional.
+  <strong>FairCheck AI</strong> — Because fairness in AI starts with fair data. 🔍
 </p>
