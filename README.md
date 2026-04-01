@@ -68,41 +68,43 @@ Screenshots demonstrating Google AI tool usage are stored in the `/proof` folder
 
 ### 🔐 Login Page
 Clean, modern login with Google Sign-In and Demo User access.
+![Uploading login.png…]()
 
-![Login Page](screenshots/login-page.png)
 
 ### 📊 Dashboard
 Drag-and-drop CSV upload with bias type info cards.
+<img width="1918" height="871" alt="dashboard" src="https://github.com/user-attachments/assets/6f488b82-8e7f-408e-9e5e-026c2fcdeb3b" />
 
-![Dashboard](screenshots/dashboard.png)
 
 ### ⏳ Analysis In Progress
 Animated multi-step analysis with real-time progress.
+<img width="1436" height="728" alt="analysis" src="https://github.com/user-attachments/assets/9022ecae-138b-407f-a962-07abe9a14e07" />
 
-![Analyzing](screenshots/analyzing.png)
+
 
 ### 📋 Bias Report — Gauge Meter
 SVG speedometer showing overall Bias Score with color-coded severity.
 
-![Bias Gauge](screenshots/bias-gauge.png)
+<img width="1910" height="926" alt="gauge meter" src="https://github.com/user-attachments/assets/6af3a931-35fe-4adf-8eb2-90365873a946" />
+
 
 ### ⚠️ Detected Issues & Recommendations
 Severity-tagged issues with actionable fix suggestions.
+<img width="1918" height="810" alt="recommendations" src="https://github.com/user-attachments/assets/46e86609-c531-40a4-9f83-d3f7a4183117" />
 
-![Issues](screenshots/issues-suggestions.png)
 
 ### 📈 Visualizations
 Pie charts for gender distribution, bar charts for temporal analysis.
 
-![Charts](screenshots/charts.png)
 
 ---
+<img width="1918" height="901" alt="pie chart" src="https://github.com/user-attachments/assets/9945a191-7833-44b5-929b-6be54d822a11" />
 
 ## Demo Video
 
 Upload your demo video to Google Drive and paste the shareable link here (max 3 minutes).
 
-[▶️ Watch Demo Video](https://drive.google.com/your-demo-link-here)
+[▶️ Watch Demo Video](https://drive.google.com/file/d/1HyJdmaCrjDGtFQAoKsFGd3MneOixkeWc/view?usp=drive_link)
 
 ---
 
@@ -122,15 +124,7 @@ npm install
 npm run dev
 ```
 
-The app will start at **http://localhost:5173/**
 
-### Quick Test
-
-1. Open the app and click **"Continue as Demo User"**
-2. Upload the included sample CSV: `public/sample-survey.csv`
-3. Click **"Analyze for Bias"** and view the full bias report
-
----
 
 ## Tech Stack
 
@@ -177,11 +171,6 @@ faircheckAI/
 
 ---
 
-## Team
-
-| Name | Role |
-|---|---|
-| **Tomy** | Full Stack Developer |
 
 ---
 
